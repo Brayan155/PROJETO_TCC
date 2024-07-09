@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discipulus Public</title>
+    <link rel="stylesheet" href="css/agenda.css">
+    <link rel="shortcut icon" href="../assets/img/icons/schedule.png" type="image/x-icon">
+    <script src="../src/js/agenda.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH%WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ%QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPjkl9QevSCWr3W6A="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg p-4 fs-5 fw-medium ">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse ">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link active py-0" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-0" href="missoes.html">Missões</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-0" href="#">Minhas Tarefas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link py-0" href="#">Status</a>
+                    </li>
+                </ul>
+
+            </div>
+            <button class="button mx-3">
+                <svg viewBox="0 0 448 512" class="bell">
+                    <path
+                        d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V200c0-75.8-55.5-138.6-128-150.1V32c0-17.7-14.3-32-32-32zm0 96h8c57.4 0 104 46.6 104 104v33.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V200c0-57.4 46.6-104 104-104h8zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z">
+                    </path>
+                </svg>
+            </button>
+            <!--offcanvas-->
+            <button class="btn ms-auto setting-btn mb-2" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                style="display: flex; justify-content: end !important;">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar1"></span>
+            </button>
+
+
+        </div>
+    </nav>
+
+    <!--offcanvas-->
+    <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header ps-0">
+            <img src="../assets/img/models/profile_pic.png" alt="" class="offcanvas-img">
+            <h2 class="offcanvas-title" id="offcanvasNavbarLabel">{user-name}</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-theme="dark"
+                    aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav gap-3 fw-medium">
+                <li class="nav-item nav-item-side">
+                    <a class="nav-link active py-0" aria-current="page" href="#" style="letter-spacing: 1px;">
+                        <i class="ri-home-2-line" style="font-size: 1.2rem;"></i>
+                        INICIO
+
+                    </a>
+                </li>
+                <li class="nav-item nav-item-side">
+                    <a class="nav-link py-0" href="#" style="letter-spacing: 1px;">
+                        <i class="ri-todo-line" style="font-size: 1.2rem;"></i>
+                        MISSÕES
+                    </a>
+                </li>
+                <li class="nav-item nav-item-side">
+                    <a class="nav-link py-0" href="#" style="letter-spacing: 1px;">
+                        <i class="ri-hourglass-line" style="font-size: 1.2rem;"></i>
+                        MINHAS TAREFAS
+                    </a>
+                </li>
+                <li class="nav-item nav-item-side">
+                    <a class="nav-link py-0" href="#" style="letter-spacing: 1px;">
+                        <i class="ri-settings-4-line" style="font-size: 1.2rem;"></i>
+                        CONFIGURAÇÕES
+                    </a>
+                </li>
+                <li class="nav-item nav-item-side">
+                    <a class="nav-link py-0" href="#" style="letter-spacing: 1px;">
+                        <i class="ri-file-paper-2-fill" style="font-size: 1.2rem;"></i>
+                        STATUS
+                    </a>
+                </li>
+                <li class="nav-item nav-item-side">
+                    <a class="nav-link py-0" href="#" style="letter-spacing: 1px;">
+                        <i class="ri-user-line" style="font-size: 1.2rem;"></i>
+                        CONTA
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--agenda-->
+    <div class="todo-container">
+        <header>
+            <h1 class="todo-h1 ">
+                Discipulus Public
+            </h1>
+            <form id="todo-form">
+                <p class="todo-p my-0">
+                    Adicionar tarefa
+                    <button class="btn btn-add" data-bs-toggle="modal" data-bs-target="#modal1" type="button"
+                        data-bs-whatever="@add" data-modal="modal1">
+                        <i class="ri-add-line  add-tarefa p-1 ms-1" style="font-size: 1.5rem;"></i>
+                    </button>
+                </p>
+        </header>
+        
+        <!--pop-up1 criação-->
+        <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Adicionar Tarefa
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!--conteudo do formulario-->
+                    <div class="modal-body p-3 modal-dialog-scrollable">
+                        <!--titulo do projeto-->
+                        <label for="todo-input-title" class="p-1">
+                            Titulo:
+                        </label>
+                        <input type="text" id="todo-input-title" placeholder="O que você vai Fazer?"
+                            class="text-breake">
+
+
+                        <!--descrição do projeto-->
+                        <label for="todo-input-desc" class="p-1">
+                            Descrição:
+                        </label>
+                        <textarea id="todo-input-desc" placeholder="Adicone uma Descrição"
+                            class="text-breake"></textarea>
+
+
+                        <!--data do projeto-->
+                        <label for="todo-input-date" class="p-1">
+                            Data:
+                        </label>
+                        <input type="date" id="todo-input-date">
+
+                        <label for="todo-input-hora">
+                            Hora:
+                        </label>
+                        <input type="time" id="todo-input-hora" class="">
+                    </div>
+ 
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Fechar
+                        </button>
+                        <button type="submit" class="btn salvar-btn">
+                            Salvar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+
+        <form id="edit-form">
+            
+            <!--pop-up2 edição-->
+            <div class="form_control">
+                <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-lg" id="modal-dialog-edit">
+                        <div class="modal-content ">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                    Editar Tarefa
+                                </h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <!--conteudo do formulario-->
+                            <div class="modal-body p-3 modal-dialog-scrollable">
+                                <!--titulo do projeto-->
+                                <label for="todo-input-title" class="p-1">
+                                    Titulo:
+                                </label>
+                                <input type="text" id="todo-input-title" placeholder="O que você vai Fazer?"
+                                    class="text-breake">
+
+
+                                <!--descrição do projeto-->
+                                <label for="todo-input-desc" class="p-1">
+                                    Descrição:
+                                </label>
+                                <textarea id="todo-input-desc" placeholder="Adicone uma Descrição"
+                                    class="text-breake"></textarea>
+
+
+                                <!--data do projeto-->
+                                <label for="todo-input-date" class="p-1">
+                                    Data:
+                                </label>
+                                <input type="date" id="todo-input-date">
+
+                                <label for="todo-input-hora">
+                                    Hora:
+                                </label>
+                                <input type="time" id="todo-input-hora" class="">
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                    id="cancel-edit-btn">
+                                    Cancelar
+                                </button>
+                                <button type="submit" class="btn salvar-btn">
+                                    Salvar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div id="toolbar">
+            <div id="search">
+                <h4 class="">
+                    Pesquisar:
+                </h4>
+                <form>
+                    <input type="text" id="search-input" placeholder="buscar">
+                    <span class="input-border"></span>
+                    <button id="limpar-busca" class="btn btn-limpa-busca mx-2">
+                        <i class="ri-delete-back-2-line limpa-tarefa"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!--<div id="filter">
+                <h4 class="">
+                    Filtrar:
+                </h4>
+                <select id="filter-select">
+                    <option value="all">
+                        Todos
+                    </option>
+                    <option value="done">
+                        Feito
+                    </option>
+                    <option value="aFazer">
+                        A fazer
+                    </option>
+                    <option value="late">
+                        Atrasado
+                    </option>
+                    <option value="Parado">
+                        Parado
+                    </option>
+                </select>
+            </div>
+        </div>-->
+
+        <div id="todo-list">
+            <!--<div id="todo" class="todo">
+                <h3 class="">
+                    Fazendo algo
+                </h3>
+                    <p class="data dma mx-3 my-2">
+                        2022/03/25
+                    </p>
+                    <p class=" data hora my-2">
+                        12:00
+                    </p>
+                <button class="finish-todo btn btn-feito">
+                    <i class="ri-check-double-line "></i>
+                </button>
+                <button class="edit-todo btn btn-edita" data-bs-toggle="modal" data-bs-target="#modal2"
+                    data-bs-whatever="@edit" data-modal="modal2">
+                    <i class="ri-edit-line"></i>
+                </button>
+                <button class="remove-todo btn btn-delete">
+                    <i class="ri-delete-bin-line btn-apaga"></i>
+                </button>
+            </div>-->
+        </div>
+
+        <p class="empty-list">
+            <i class="ri-ghost-smile-line ghostIconAnimation"></i> Nenhuma tarefa adicionada , Crie uma.
+        </p>
+    </div>
+
+    
+</body>
+
+</html>
