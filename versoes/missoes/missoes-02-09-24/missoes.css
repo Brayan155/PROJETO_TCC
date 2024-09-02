@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #100E09 !important;
+    overflow-x: hidden;
+    font-family: 'Roboto';
+}
+
+.container{
+    text-transform: uppercase;
+}
+
+.row{
+    padding: 5px;
+}
+
+.col{
+    position: relative;
+    border: none;
+    border-radius: 0px 5px 0px 5px;
+    padding: 5px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 3px 3px 1px #28242c;
+    width: 270px !important;
+    height: 290px;
+}
+
+.mission-card{
+    position: absolute;
+    top: 10px;
+    left: 10px;  
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.coin-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(140deg,rgb(255, 166, 0)60%,white);
+    width: 130px;
+    height: 170px;
+    position: relative;
+}
+
+.fa-database{
+    color: black;
+    font-size: 5rem;
+}
