@@ -1,0 +1,97 @@
+/* Importações de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo do corpo */
+body {
+    background-color: #14151c !important;
+    color: #ffffff;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Contêiner principal */
+.container {
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+/* Missões */
+.mission-card {
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    width: 100%;
+    max-width: 300px;
+    background-color: #fff; /* Fallback se a classe específica não for aplicada */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    color: #000;
+}
+
+.mission-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.mission-card.coin-card {
+    background-color: #FFD700;
+    border-color: #FFB400;
+}
+
+.mission-card.book-card {
+    background-color: #98FB98;
+    border-color: #76C76C;
+}
+
+.mission-card.hs-card {
+    background-color: #FFA500;
+    border-color: #E59400;
+}
+
+.mission-card.file-card {
+    background-color: #1E90FF;
+    border-color: #1C86EE;
+}
+
+/* Barra de progresso */
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: green;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Botão de marcar como feito */
+.mark-done {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.mark-done:hover {
+    background-color: #218838;
+}
